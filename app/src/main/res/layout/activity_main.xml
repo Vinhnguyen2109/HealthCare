@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bghome">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/name"
+            android:layout_marginTop="54dp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btn_lich_uong_thuoc"
+            android:layout_marginTop="35dp"
+            android:layout_width="200dp"
+            android:layout_height="62dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:text="Lịch uống thuốc"
+            android:textAllCaps="false"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/btn_trieu_chung"
+            android:layout_marginTop="22dp"
+            android:layout_width="200dp"
+            android:layout_height="62dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:text="Lịch sử triệu chứng"
+            android:textAllCaps="false"
+            android:textSize="16dp"/>
+        <Button
+            android:id="@+id/btn_huyet_ap"
+            android:layout_marginTop="22dp"
+            android:layout_width="200dp"
+            android:layout_height="62dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:text="Theo dõi huyết áp"
+            android:textAllCaps="false"
+            android:textSize="16dp"/>
+        <Button
+            android:id="@+id/btn_thong_ke"
+            android:layout_marginTop="22dp"
+            android:layout_width="200dp"
+            android:layout_height="62dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:text="Thống kê"
+            android:textAllCaps="false"
+            android:textSize="18dp"/>
+        <LinearLayout
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_lien_he"
+                android:layout_marginBottom="10dp"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/teal_200"
+                android:layout_gravity="center"
+                android:text="Liên hệ"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
