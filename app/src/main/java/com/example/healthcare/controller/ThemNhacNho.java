@@ -60,6 +60,7 @@ public class ThemNhacNho extends AppCompatActivity {
                 dataManager.addUongThuoc(truaUT);
                 dataManager.addUongThuoc(toiUT);
                 Intent intent = new Intent(ThemNhacNho.this, LichUongThuoc.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -75,6 +76,7 @@ public class ThemNhacNho extends AppCompatActivity {
                 if (LichUongThuoc.cusThuoc != null)
                     dataManager.deleteThuoc(LichUongThuoc.cusThuoc.getId());
                 Intent intent = new Intent(ThemNhacNho.this, LichUongThuoc.class);
+                finish();
                 startActivity(intent);
             }
         });

@@ -91,6 +91,7 @@ public class LichUongThuoc extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LichUongThuoc.this, ThemNhacNho.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -102,6 +103,7 @@ public class LichUongThuoc extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 cusThuoc = items.get(position);
                 Intent intent = new Intent(LichUongThuoc.this, ThemNhacNho.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -111,6 +113,7 @@ public class LichUongThuoc extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LichUongThuoc.this, MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });

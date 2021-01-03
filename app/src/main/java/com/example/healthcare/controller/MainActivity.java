@@ -64,7 +64,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        /*-------theo doi trieu chung-------*/
+        btn_trieu_chung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,TheoDoiTrieuChung.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void getView() {
