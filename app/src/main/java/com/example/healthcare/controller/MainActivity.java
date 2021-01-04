@@ -72,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        /*-------theo doi huyet ap-------*/
+        btn_huyet_ap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,TheoDoiHuyetAp.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void getView() {

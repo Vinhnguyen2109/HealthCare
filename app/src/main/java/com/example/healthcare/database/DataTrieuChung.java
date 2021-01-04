@@ -54,22 +54,4 @@ public class DataTrieuChung extends DataManager {
             e.printStackTrace();
         }
     }
-    public List<Integer> getListTaiKham(){
-        SQLiteDatabase db=getReadableDatabase();
-        String sql="SELECT * FROM TrieuChung WHERE taikham=1";
-        List<Integer> items=null;
-        try{
-            Cursor cur = db.rawQuery(sql, null);
-            if (cur.getCount() != 0)
-                if (cur.moveToFirst()) {
-                    do {
-                        int temp=cur.getInt(cur.getColumnIndex("ngay"));
-                        items.add(temp);
-                    } while (cur.moveToNext());
-                }
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return items;
-    }
 }

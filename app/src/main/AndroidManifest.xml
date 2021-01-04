@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".controller.TheoDoiTrieuChung"></activity>
+        <activity android:name=".controller.ResultHuyetAp"></activity>
+        <activity android:name=".controller.TheoDoiHuyetAp" />
+        <activity android:name=".controller.TheoDoiTrieuChung" />
         <activity android:name=".controller.ThemNhacNho" />
         <activity android:name=".controller.LichUongThuoc" />
         <activity android:name=".controller.MainActivity">
