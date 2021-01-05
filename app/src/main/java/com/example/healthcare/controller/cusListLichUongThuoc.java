@@ -12,11 +12,11 @@ import com.example.healthcare.model.Thuoc;
 
 import java.util.List;
 
-public class cusListAdapter extends BaseAdapter {
+public class cusListLichUongThuoc extends BaseAdapter {
     private List<Thuoc> listData;
     private LayoutInflater layoutInflater;
     private Context context;
-    public cusListAdapter(Context aContext, List<Thuoc> listData) {
+    public cusListLichUongThuoc(Context aContext, List<Thuoc> listData) {
         this.context = aContext;
         this.listData = listData;
         layoutInflater = LayoutInflater.from(aContext);
@@ -41,7 +41,7 @@ public class cusListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.item, null);
+            convertView = layoutInflater.inflate(R.layout.item_lich_uong_thuoc, null);
             holder = new ViewHolder();
             holder.ten = convertView.findViewById(R.id.item_ten);
             holder.thoidiem = convertView.findViewById(R.id.item_thoigian);

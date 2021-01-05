@@ -1,6 +1,5 @@
 package com.example.healthcare.controller;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -53,13 +52,13 @@ public class LichUongThuoc extends AppCompatActivity {
                 if (ut.getBuoi().equals(btn_toi.getText())) items_toi.add(t);
             }
         }
-        list_thuoc.setAdapter(new cusListAdapter(this, items_sang));
+        list_thuoc.setAdapter(new cusListLichUongThuoc(this, items_sang));
         btn_sang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btn_sang.setBackgroundColor(Color.parseColor("#018786"));
                 items=items_sang;
-                list_thuoc.setAdapter(new cusListAdapter(LichUongThuoc.this, items_sang));
+                list_thuoc.setAdapter(new cusListLichUongThuoc(LichUongThuoc.this, items_sang));
                 btn_trua.setBackgroundColor(Color.parseColor("#03DAC5"));
                 btn_toi.setBackgroundColor(Color.parseColor("#03DAC5"));
             }
@@ -69,7 +68,7 @@ public class LichUongThuoc extends AppCompatActivity {
             public void onClick(View v) {
                 btn_trua.setBackgroundColor(Color.parseColor("#018786"));
                 items=items_trua;
-                list_thuoc.setAdapter(new cusListAdapter(LichUongThuoc.this, items_trua));
+                list_thuoc.setAdapter(new cusListLichUongThuoc(LichUongThuoc.this, items_trua));
                 btn_sang.setBackgroundColor(Color.parseColor("#03DAC5"));
                 btn_toi.setBackgroundColor(Color.parseColor("#03DAC5"));
             }
@@ -79,7 +78,7 @@ public class LichUongThuoc extends AppCompatActivity {
             public void onClick(View v) {
                 btn_toi.setBackgroundColor(Color.parseColor("#018786"));
                 items=items_toi;
-                list_thuoc.setAdapter(new cusListAdapter(LichUongThuoc.this, items_toi));
+                list_thuoc.setAdapter(new cusListLichUongThuoc(LichUongThuoc.this, items_toi));
                 btn_sang.setBackgroundColor(Color.parseColor("#03DAC5"));
                 btn_trua.setBackgroundColor(Color.parseColor("#03DAC5"));
             }

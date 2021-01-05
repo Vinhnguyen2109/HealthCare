@@ -80,10 +80,10 @@ public class ResultHuyetAp extends AppCompatActivity {
                 int d = localDate.getDayOfMonth();
                 String s = String.format("%02d", d) + String.format("%02d", m) + String.valueOf(y);
                 HuyetAp temp = new HuyetAp();
-                temp.setId(dataManager.highestID() + 1);
                 temp.setMax(TheoDoiHuyetAp.BLOOD_MAX);
                 temp.setMin(TheoDoiHuyetAp.BLOOD_MIN);
                 temp.setNgay(Integer.parseInt(s));
+                dataManager.deleteHuyetAp(Integer.parseInt(s));
                 dataManager.addHuyetAp(temp);
                 Intent intent = new Intent(ResultHuyetAp.this, TheoDoiHuyetAp.class);
                 finish();

@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DataManager extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "database.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
 
     public DataManager(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -20,7 +20,7 @@ public class DataManager extends SQLiteOpenHelper {
         db.execSQL(sql);
         sql = "CREATE TABLE TrieuChung (ngay int, mota TEXT, taikham INTEGER, PRIMARY KEY(ngay))";
         db.execSQL(sql);
-        sql = "CREATE TABLE HuyetAp (id INTEGER , ngay INTEGER, min INTEGER, max INTEGER, PRIMARY KEY(id))";
+        sql = "CREATE TABLE HuyetAp (ngay INTEGER, min INTEGER, max INTEGER, PRIMARY KEY(ngay))";
         db.execSQL(sql);
     }
 

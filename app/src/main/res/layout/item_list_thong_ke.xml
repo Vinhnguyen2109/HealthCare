@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="9"
+    android:background="#ffffff">
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/ngay_tk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DD/MM/YYYY"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
+    <TextView
+        android:paddingLeft="20dp"
+        android:id="@+id/huyet_ap_tk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Huyết áp : Không ghi chép"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
+    <TextView
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="20dp"
+        android:id="@+id/trieu_chung_tk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Triệu chứng : Không ghi chép"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
+</LinearLayout>
