@@ -2,10 +2,12 @@ package com.example.healthcare.controller;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +34,7 @@ public class ThongKe extends AppCompatActivity {
     List<Integer> listNgay;
     ListView listThongKe;
     Button btn_thong_ke;
+    ImageButton btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,10 +89,37 @@ public class ThongKe extends AppCompatActivity {
                         if (!listNgay.contains(i.getNgay()))
                             listNgay.add(i.getNgay());
                 }
+                sortListNgay();
                 listThongKe.setAdapter(new cusListThongKe(ThongKe.this, listNgay));
             }
         });
         //endregion
+        //region button back
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ThongKe.this, MainActivity.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+        //endregion
+    }
+
+    private void sortListNgay() {
+        List<Integer> list = listNgay;
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i + 1; j < list.size(); j++) {
+                Date i_ngay = formatNgay(convertNgay(list.get(i)));
+                Date j_ngay = formatNgay(convertNgay(list.get(j)));
+                if (j_ngay.before(i_ngay)) {
+                    int t = list.get(i);
+                    list.set(i, list.get(j));
+                    list.set(j, t);
+                }
+            }
+        }
+        listNgay = list;
     }
 
     public Date formatNgay(String t) {
@@ -119,6 +149,7 @@ public class ThongKe extends AppCompatActivity {
         todate = findViewById(R.id.btn_to_date);
         listThongKe = findViewById(R.id.list_thong_ke);
         btn_thong_ke = findViewById(R.id.thong_ke);
+        btn_back = findViewById(R.id.btn_thong_ke_back);
     }
 
     public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {

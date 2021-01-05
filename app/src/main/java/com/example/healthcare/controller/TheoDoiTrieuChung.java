@@ -76,7 +76,7 @@ public class TheoDoiTrieuChung extends AppCompatActivity {
                 else temp.setTaikham(0);
                 dataManager.addTrieuChung(temp);
                 DialogFragment dialog = new MyDialogFragment();
-                dialog.show(getSupportFragmentManager(), "MyDialogFragmentTag");
+                dialog.show(getSupportFragmentManager(), "LuuTrieuChung");
 
             }
         });
@@ -118,7 +118,14 @@ public class TheoDoiTrieuChung extends AppCompatActivity {
 
             // Use the Builder class for convenient dialog construction
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("Đã lưu");
+            if(getTag().equals("LuuTrieuChung"))builder.setMessage("Đã lưu");
+            else if(getTag().equals("ThongTinLienHe")){
+                builder.setTitle("Nhóm 13");
+                builder.setMessage("Nguyễn Văn Vinh - 16521444\n" +
+                        "Trương Quang Trí - 16521289\n" +
+                        "SĐT : 033 406 6400\n" +
+                        "Địa chỉ : KTX Khu A");
+            }
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                     // You don't have to do anything here if you just

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import com.example.healthcare.R;
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getView();
-        /*-------lich uong thuoc-------*/
+        //region nhac lich uong thuoc
         btn_uong_thuoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*-------theo doi trieu chung-------*/
+        //endregion
+        //region theo doi suc khoe
         btn_trieu_chung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*-------theo doi huyet ap-------*/
+        //endregion
+        //region theo doi huyet ap
         btn_huyet_ap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*-------thong ke-------*/
+        //endregion
+        //region thong ke
         btn_thong_ke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //endregion
+        //region thong tin lien he
+        btn_lien_he.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment dialog = new TheoDoiTrieuChung.MyDialogFragment();
+                dialog.show(getSupportFragmentManager(), "ThongTinLienHe");
+            }
+        });
+        //endregion
     }
 
     private void getView() {
