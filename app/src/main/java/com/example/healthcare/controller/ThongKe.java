@@ -28,7 +28,7 @@ import java.util.List;
 
 public class ThongKe extends AppCompatActivity {
     static Button fromdate, todate;
-    static String from = "01-01-2021", to = "01-01-2021";
+    static String from = "08-01-2021", to = "08-01-2021";
     DataTrieuChung dataTrieuChung;
     DataHuyetAp dataHuyetAp;
     List<Integer> listNgay;

@@ -120,11 +120,9 @@ public class TheoDoiTrieuChung extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             if(getTag().equals("LuuTrieuChung"))builder.setMessage("Đã lưu");
             else if(getTag().equals("ThongTinLienHe")){
-                builder.setTitle("Nhóm 13");
                 builder.setMessage("Nguyễn Văn Vinh - 16521444\n" +
-                        "Trương Quang Trí - 16521289\n" +
                         "SĐT : 033 406 6400\n" +
-                        "Địa chỉ : KTX Khu A");
+                        "Địa chỉ : KTX Khu A, ĐHQG TPHCM");
             }
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
